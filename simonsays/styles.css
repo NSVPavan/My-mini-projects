@@ -1,0 +1,45 @@
+body{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 4rem;
+}
+p{
+    font-size: 2rem;
+}
+.btn-container{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+.btn{
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    border: 4px solid black;
+}
+#btn-1{
+    background-color: #ed4e4e; ;
+}
+#btn-2{
+    background-color: #75e377;
+}
+#btn-3{
+    background-color: #b0e0e6;
+}
+#btn-4{
+    background-color: #f5ca53;
+}
+
+/* Soft Mauve: #D8BFD8
+Pale Sage: #C8E6C9
+Powder Blue: #B0E0E6
+Blush Peach: #FFDAB9*/
