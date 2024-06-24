@@ -13,7 +13,9 @@ document.addEventListener('keydown',()=>{
     let h3=document.querySelector('h3');
     h3.innerText='Game has started, head to console.';
     h3.style.color='green';
-    for(let i=0;i<5;i++){
-        console.log(randomResponse());
+    for(let round=1;round<=5;round++){
+        console.log(`Round-${round}`);
+        let userResponse=prompt("What's your move: rock or paper or scissor");
+        console.log(`Your move: ${userResponse}`);
     }
 })
