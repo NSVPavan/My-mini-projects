@@ -19,20 +19,22 @@ document.addEventListener('keydown',()=>{
     let h3=document.querySelector('h3');
     h3.innerText='Game has started, head to console.';
     h3.style.color='green';
-    for(let round=1;round<=5;round++){
-        console.log(`Round-${round}`);
-        let userResponse="";
-        try{
-            while(!responses.includes(userResponse.toUpperCase())){
-                userResponse=prompt("What's your move, rock, paper or scissor?");
-                if(!responses.includes(userResponse.toUpperCase())){
-                    console.error("Enter a valid move!");
+    setTimeout(()=>{
+        for(let round=1;round<=5;round++){
+            console.log(`Round-${round}`);
+            let userResponse="";
+            try{
+                while(!responses.includes(userResponse.toUpperCase())){
+                    userResponse=prompt("What's your move, rock, paper or scissor?");
+                    if(!responses.includes(userResponse.toUpperCase())){
+                        console.error("Enter a valid move!");
+                    }
                 }
+            }catch(error){
+                console.warn('Some error occured. The game has restarted.');
+                restartGame();
+                return;
             }
-        }catch(error){
-            console.warn('Some error occured. The game has restarted.');
-            restartGame();
-            return;
         }
-    }
+    },100);
 })
