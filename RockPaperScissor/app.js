@@ -15,7 +15,12 @@ document.addEventListener('keydown',()=>{
     h3.style.color='green';
     for(let round=1;round<=5;round++){
         console.log(`Round-${round}`);
-        let userResponse=prompt("What's your move: rock or paper or scissor");
-        console.log(`Your move: ${userResponse}`);
+        let userResponse="";
+        while(!responses.includes(userResponse.toUpperCase())){
+            userResponse=prompt("What's your move, rock, paper or scissor?");
+            if(!responses.includes(userResponse.toUpperCase())){
+                console.error("Enter a valid move!");
+            }
+        }
     }
 })
