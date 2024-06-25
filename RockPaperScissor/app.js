@@ -22,7 +22,7 @@ document.addEventListener('keydown',()=>{
     let userPoints=0,computerPoints=0;
     setTimeout(()=>{
         for(let round=1;round<=5;round++){
-            console.log(`Round-${round}`);
+            console.log(`\nRound-${round}`);
             let userResponse="";
             try{
                 while(!responses.includes(userResponse.toUpperCase())){
@@ -74,7 +74,7 @@ document.addEventListener('keydown',()=>{
                 }
             }
         }
-        console.log(`Your points: ${userPoints}`);
+        console.log(`\nYour points: ${userPoints}`);
         console.log(`Computer's points: ${computerPoints}`);
         let overallOutcome=1;
         if(computerPoints>userPoints){
@@ -92,5 +92,6 @@ document.addEventListener('keydown',()=>{
         else{
             console.log("Overall outcome: You lose :(");
         }
+        restartGame();
     },100);
 })
