@@ -36,6 +36,34 @@ document.addEventListener('keydown',()=>{
                 restartGame();
                 return;
             }
+            userResponse=userResponse.toUpperCase();
+            let computerResponse=randomResponse();
+            if(userResponse===computerResponse){
+                console.log("It's a draw.");
+            }
+            if(userResponse=="ROCK"){
+                if(computerResponse=="SCISSOR"){
+                    console.log("You win!");
+                }
+                else{
+                    console.log("You lose :(")
+                }
+            }else if(userResponse=="PAPER"){
+                if(computerResponse=="ROCK"){
+                    console.log("You win!");
+                }
+                else{
+                    console.log("You lose :(")
+                }
+            }
+            else if(userResponse=="SCISSOR"){
+                if(computerResponse=="PAPER"){
+                    console.log("You win!");
+                }
+                else{
+                    console.log("You lose :(")
+                }
+            }
         }
     },100);
 })
