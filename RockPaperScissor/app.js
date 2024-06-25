@@ -38,32 +38,59 @@ document.addEventListener('keydown',()=>{
             }
             userResponse=userResponse.toUpperCase();
             let computerResponse=randomResponse();
+            console.log(`Your move: ${userResponse} \t\t Computer's move: ${computerResponse}`);
             if(userResponse===computerResponse){
                 console.log("It's a draw.");
+                userPoints++;
+                computerPoints++;
             }
-            if(userResponse=="ROCK"){
+            else if(userResponse=="ROCK"){
                 if(computerResponse=="SCISSOR"){
                     console.log("You win!");
+                    userPoints++;
                 }
                 else{
-                    console.log("You lose :(")
+                    console.log("You lose :(");
+                    computerPoints++;
                 }
             }else if(userResponse=="PAPER"){
                 if(computerResponse=="ROCK"){
                     console.log("You win!");
+                    userPoints++;
                 }
                 else{
-                    console.log("You lose :(")
+                    console.log("You lose :(");
+                    computerPoints++;
                 }
             }
             else if(userResponse=="SCISSOR"){
                 if(computerResponse=="PAPER"){
                     console.log("You win!");
+                    userPoints++;
                 }
                 else{
-                    console.log("You lose :(")
+                    console.log("You lose :(");
+                    computerPoints++;
                 }
             }
+        }
+        console.log(`Your points: ${userPoints}`);
+        console.log(`Computer's points: ${computerPoints}`);
+        let overallOutcome=1;
+        if(computerPoints>userPoints){
+            overallOutcome=-1;
+        }
+        else if(computerPoints==userPoints){
+            overallOutcome=0;
+        }
+        if(overallOutcome==1){
+            console.log("Overall outcome: You win!");
+        }
+        else if(overallOutcome==0){
+            console.log("Overall outcome: It's a draw");
+        }
+        else{
+            console.log("Overall outcome: You lose :(");
         }
     },100);
 })
