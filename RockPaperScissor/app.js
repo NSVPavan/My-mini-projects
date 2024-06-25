@@ -19,6 +19,7 @@ document.addEventListener('keydown',()=>{
     let h3=document.querySelector('h3');
     h3.innerText='Game has started, head to console.';
     h3.style.color='green';
+    let userPoints=0,computerPoints=0;
     setTimeout(()=>{
         for(let round=1;round<=5;round++){
             console.log(`Round-${round}`);
