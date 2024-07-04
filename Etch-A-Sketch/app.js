@@ -4,6 +4,13 @@ let grid=document.querySelector('.grid');
 
 let n;
 
+function clearGrid(){
+    let cells = document.querySelectorAll('.cell');
+    for(cell of cells){
+        cell.remove();
+    }
+}
+
 button.addEventListener('click',()=>{
     clearGrid();
     n=input.value;
