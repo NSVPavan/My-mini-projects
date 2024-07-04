@@ -1,0 +1,22 @@
+body{
+    text-align: center; 
+}
+h1{
+    margin-bottom: 20px;
+}
+input{
+    width: auto;
+    min-width: 170px;
+    margin-right: 20px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.grid{
+    width: 700px;
+    height: 700px;
+    border: 1px solid black;
+}
