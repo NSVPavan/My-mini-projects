@@ -18,6 +18,7 @@ button.addEventListener('click',()=>{
         let cell = document.createElement('div');
         cell.addEventListener('mouseenter',()=>{
             cell.style.backgroundColor='black';
+            removeEventListener('mouseenter',cell);
         });
         cell.classList.add('cell');
         cell.style.height=`${700/parseFloat(n)-2}px`; //To account for borders
