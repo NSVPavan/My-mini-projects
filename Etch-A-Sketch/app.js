@@ -1,6 +1,11 @@
 let input=document.querySelector('input');
 let button=document.querySelector('button');
 let grid=document.querySelector('.grid');
+let rangeValue=document.querySelector('#range-value');
+
+input.addEventListener('input',()=>{
+    rangeValue.textContent=input.value;
+})
 
 let n;
 
@@ -18,6 +23,7 @@ button.addEventListener('click',()=>{
         let cell = document.createElement('div');
         cell.addEventListener('mouseenter',()=>{
             cell.style.backgroundColor='black';
+            cell.style.borderColor='black';
             removeEventListener('mouseenter',cell);
         });
         cell.classList.add('cell');

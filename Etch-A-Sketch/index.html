@@ -8,10 +8,9 @@
 </head>
 <body>
     <h1>Etch-A-Sketch</h1>
-    <form action="/">
-        <input type="number" min="1" max="100" required placeholder="Enter n to create nxn grid">
-        <button class="submit" type="button">Generate</button>
-    </form>
+    <span id="range-value">1</span>
+    <input id='range' type="range" min="1" max="100" value="1" placeholder="Enter n to create nxn grid">
+    <button class="submit" type="buttom">Generate</button>
     <div class="container">
         <div class="grid"></div>
     </div>
