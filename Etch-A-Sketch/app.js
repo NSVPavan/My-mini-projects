@@ -4,7 +4,7 @@ let grid=document.querySelector('.grid');
 let rangeValue=document.querySelector('#range-value');
 
 input.addEventListener('input',()=>{
-    rangeValue.textContent=input.value;
+    rangeValue.textContent=`${input.value} x ${input.value}`;
 })
 
 let n;
